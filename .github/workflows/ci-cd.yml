@@ -1,0 +1,46 @@
+name: AI-Terraform-CI-CD
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  terraform:
+    runs-on: ubuntu-latest
+
+    env:
+      ARM_CLIENT_ID: ${{ secrets.ARM_CLIENT_ID }}
+      ARM_CLIENT_SECRET: ${{ secrets.ARM_CLIENT_SECRET }}
+      ARM_SUBSCRIPTION_ID: ${{ secrets.ARM_SUBSCRIPTION_ID }}
+      ARM_TENANT_ID: ${{ secrets.ARM_TENANT_ID }}
+      OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Terraform
+        uses: hashicorp/setup-terraform@v2
+
+      - name: Install Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      - name: Install dependencies
+        run: pip install openai
+
+      - name: Run AI Prompt Generator
+        run: python scripts/prompt_terraform.py
+
+      - name: Terraform Init
+        run: terraform init
+
+      - name: Terraform Plan (SIT)
+        run: terraform plan -var-file=environments/sit/terraform.tfvars
+
+      - name: Terraform Apply (SIT)
+        if: github.ref == 'refs/heads/main'
+        run: terraform apply -var-file=environments/sit/terraform.tfvars -auto-approve
