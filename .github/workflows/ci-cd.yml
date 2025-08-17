@@ -30,8 +30,7 @@ jobs:
           python-version: '3.x'
 
       - name: Install dependencies
-        run: pip install openai==0.28
-
+        run: pip install "openai>=1.0.0"
 
       - name: Run AI Prompt Generator
         run: python scripts/prompt_terraform.py
