@@ -1,0 +1,18 @@
+# Core AI/Prompt Engineering
+openai>=1.12.0         # For OpenAI API calls
+ollama>=0.1.0          # If you want to use local LLMs like LLaMA, Mistral etc.
+
+# Infrastructure as Code Automation
+python-terraform>=0.10.1   # Python wrapper for Terraform
+
+# Azure SDK
+azure-identity>=1.15.0     # Authentication for Azure
+azure-mgmt-resource>=23.0.0  # For Resource Group, deployments
+azure-mgmt-compute>=30.4.0   # For VM management
+azure-mgmt-network>=25.1.0   # For VNet, NSG, IPs
+
+# Utilities
+python-dotenv>=1.0.1     # Load env variables from .env file
+pyyaml>=6.0.2            # Config files in YAML for environments
+requests>=2.31.0         # REST API calls if needed
+rich>=13.7.1             # Nice CLI formatting
