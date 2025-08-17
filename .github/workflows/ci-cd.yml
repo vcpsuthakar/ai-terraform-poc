@@ -32,6 +32,9 @@ jobs:
       - name: Install dependencies
         run: pip install "openai>=1.0.0"
 
+      - name: Debug OpenAI connectivity
+        run: curl -I https://api.openai.com/v1/models
+
       - name: Run AI Prompt Generator
         run: python scripts/prompt_terraform.py
 
