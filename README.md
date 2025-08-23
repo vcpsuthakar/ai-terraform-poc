@@ -16,24 +16,24 @@ An intelligent Terraform code generator that uses OpenAI GPT-4 to create, valida
 
 ```
 ai-terraform-poc/
-├── agent/                      # AI agents and automation scripts
-│   ├── prompt_terraform.py     # Main AI code generator
-│   └── validate_fix.py         # Validation and fixing utilities
-├── environments/               # Environment-specific configurations
-│   ├── sit/terraform.tfvars    # System Integration Testing
-│   ├── urt/terraform.tfvars    # User Acceptance Testing
-│   └── prod/terraform.tfvars   # Production
-├── modules/                    # Generated Terraform modules
-│   └── main.tf                 # Main infrastructure configuration
-├── prompts/                    # AI prompt engineering templates
-│   ├── config.json             # AI model configuration
-│   ├── system_prompt.txt       # System instructions for AI
-│   ├── user_prompt.txt         # Current infrastructure requirements
-│   ├── user_prompt_template.txt # Template for new requirements
-│   └── fix_prompt.txt          # Error fixing instructions
-├── .github/workflows/          # CI/CD automation
-│   └── ci-cd.yml              # GitHub Actions pipeline
-└── requirements.txt            # Python dependencies
+├── agent/                      
+│   ├── prompt_terraform.py     
+│   └── validate_fix.py         
+├── environments/               
+│   ├── sit/terraform.tfvars    
+│   ├── urt/terraform.tfvars    
+│   └── prod/terraform.tfvars   
+├── modules/                    
+│   └── main.tf                 
+├── prompts/                    
+│   ├── config.json             
+│   ├── system_prompt.txt       
+│   ├── user_prompt.txt         
+│   ├── user_prompt_template.txt 
+│   └── fix_prompt.txt          
+├── .github/workflows/          
+│   └── ci-cd.yml              
+└── requirements.txt            
 ```
 
 ## 🚀 Quick Start
