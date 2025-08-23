@@ -1,9 +1,9 @@
 name: AI-Terraform-CI-CD
 
 on:
-  push:
-    branches:
-      - main
+  # push:
+  #   branches:
+  #     - main
   workflow_dispatch:
 
 jobs:
@@ -37,13 +37,3 @@ jobs:
 
       - name: Run AI Prompt Generator
         run: python scripts/prompt_terraform.py
-
-      # - name: Terraform Init
-      #   run: terraform init
-
-      # - name: Terraform Plan (SIT)
-      #   run: terraform plan -var-file=environments/sit/terraform.tfvars
-
-      # - name: Terraform Apply (SIT)
-      #   if: github.ref == 'refs/heads/main'
-      #   run: terraform apply -var-file=environments/sit/terraform.tfvars -auto-approve
