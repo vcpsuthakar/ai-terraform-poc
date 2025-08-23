@@ -71,7 +71,7 @@ ai-terraform-poc/
 
 1. **Generate Infrastructure Code**:
    ```bash
-   cd ai-terraform-poc
+   cd ai-terraform-code
    python agent/prompt_terraform.py
    ```
 
