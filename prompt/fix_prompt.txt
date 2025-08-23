@@ -1,0 +1,34 @@
+You are a Terraform debugging expert. Fix the following Terraform code error:
+
+ERROR MESSAGE:
+{error_message}
+
+ORIGINAL CODE:
+{original_code}
+
+INSTRUCTIONS:
+1. Analyze the error message carefully
+2. Identify the root cause of the issue
+3. Fix the code while maintaining all original functionality
+4. Ensure the fix follows Terraform and Azure best practices
+5. Replace deprecated resources with their supported equivalents 
+   (e.g., use "azurerm_service_plan" instead of "azurerm_app_service_plan")
+6. Replace any local certificate references (e.g., filebase64 on .pfx files) with 
+   Azure Key Vault secret references
+7. For SQL databases, if "sku_name" is needed, switch to "azurerm_mssql_database"
+   instead of "azurerm_sql_database" since "sku_name" is only valid there.
+8. Always cross-check arguments with the latest official Terraform AzureRM provider docs:
+   https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs
+9. Return ONLY the corrected HCL code, no explanations
+10. If the original user prompt was structured (JSON/YAML or key-value), preserve its intent and ensure fixes continue to honor those requirements.
+
+Common issues to check:
+- Provider version constraints
+- Resource attribute names and values
+- Required vs optional arguments
+- Data source references
+- Variable definitions and usage
+- Resource dependencies
+- API version compatibility
+- Resource naming conflicts
+- Authentication and authorization

@@ -1,0 +1,19 @@
+PROJECT DETAILS:
+- Project Name: Loyalty Platform
+- Environment: Development
+- Business Unit: Marketing
+- Owner: Loyalty Team
+- Cost Center: CC-2025-018
+
+RESOURCE REQUIREMENTS:
+- Create Terraform code to provision an Azure Resource Group in East US with tags for dev environment. Include a storage account with private endpoint and network security rules.
+
+NAMING & GOVERNANCE:
+- Naming Prefix: loy-dev
+- Tags: 
+   Environment = dev
+   Owner = Loyalty
+   CostCenter = CC-2025-018
+   Compliance = PCI
+   Application = Loyalty Platform
+

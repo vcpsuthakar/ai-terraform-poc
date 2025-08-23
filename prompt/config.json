@@ -1,0 +1,6 @@
+{
+  "model": "gpt-4o",
+  "temperature": 0,
+  "max_tokens": 4000,
+  "output_file": "main.tf"
+}

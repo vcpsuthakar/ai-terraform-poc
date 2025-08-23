@@ -1,0 +1,28 @@
+PROJECT DETAILS:
+- Project Name: <string>
+- Environment: <Development | QA | Staging | Production>
+- Business Unit: <string>
+- Owner: <team or person>
+- Cost Center: <ID>
+
+RESOURCE REQUIREMENTS:
+- Application Type: <Web App | API | Data Pipeline | Analytics | ML | Custom>
+- Expected Workload: <Low | Medium | High | Mission-Critical>
+- Data Storage Needs: <SQL Database | NoSQL | Blob Storage | Files | None>
+- Networking Needs: <Public Access | Private VNet | Hybrid | VPN | App Gateway with WAF>
+- Monitoring & Logging: <Yes/No, specify tools (e.g., App Insights, Log Analytics)>
+- Security Requirements: <Key Vault | Managed Identity | RBAC Roles | Private Endpoints>
+- High Availability: <Yes/No>
+- Disaster Recovery: <Geo-Replication | Backup Policies | None>
+
+NAMING & GOVERNANCE:
+- Naming Prefix: <org/project standard, e.g., "ecom-prod">
+- Tags: 
+   Environment = <env>
+   Owner = <owner>
+   CostCenter = <id>
+   Compliance = <PCI/GDPR/None>
+   Application = <project name>
+
+OUTPUTS REQUIRED:
+- List of outputs user needs (App Service URL, SQL connection string, Storage endpoint, etc.)
